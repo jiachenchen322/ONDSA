@@ -2,7 +2,7 @@ library(huge)
 library(BDgraph)
 library(mvtnorm)
 library(FastGGM)
-source("FDRGGM_function.r")
+source("ONDSA_function.r")
 ##load simulated data of three subgroups
 load("simdata.rda")
 ##this example have three subgroups, with 500 variables, and sample size to be 300/300/300
@@ -34,5 +34,5 @@ varname=colnames(simdata1)
 #N is an array storing sample size for each subgroup
 #alpha: a pre-specified FDR control level for both steps
 #varname is an array of names for variables
-res=FDRGGM(Omega,p,K,N,alpha,varname)
+res=ONDSA(Omega,p,K,N,alpha,varname)
 ##res will return differential_structures and similar_structures, respectively
