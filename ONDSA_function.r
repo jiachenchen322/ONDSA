@@ -105,7 +105,7 @@ FDR_control_t2<-function(T2matrix,p,selected.listT2,alpha){
 #N is an array storing sample size for each subgroup
 #alpha: a pre-specified FDR control level for both steps
 #varname is an array of names for variables
-FDRGGM<-function(Omega,p,K,N,alpha,varname){
+ONDSA<-function(Omega,p,K,N,alpha,varname){
   
   Diff.Chisq=Diff.Chisq.omega(K,p,Omega,N)
   T1matrix=Diff.Chisq[[2]]
