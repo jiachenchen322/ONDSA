@@ -1,0 +1,17 @@
+Package: ONDSA
+Type: Package
+Title: Omics Networks Differential and Similarity Analysis
+Version: 1.0
+Author: Jiachen Chen, Joanne M Murabito, Kathryn L Lunetta
+Maintainer: Jiachen Chen <chenjc@bu.edu>
+Description: A rigorous statistical testing framework leveraging Gaussian graphical models (GGM) for differential and similarity analysis of multiple omics networks, with False Discovery Rate (FDR) control.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+  FastGGM,
+  Rcpp,
+  RcppParallel
+LinkingTo: Rcpp, RcppParallel
+Remotes: wt2015-github/FastGGM
+RoxygenNote: 7.2.3
