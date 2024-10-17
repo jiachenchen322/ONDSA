@@ -15,7 +15,7 @@ Here, we provide an overview of ONDSA:
 
 ## Installation
 
-ONDSA and its experiments are implemented in R. Make sure the following dependencies are installed: "FastGGM", "Rcpp", and "RcppParallel". These packages are required to estimate precision matrices and run ONDSA effectively. You can install ONDSA using the following steps:
+ONDSA and its experiments are implemented in R. Make sure the following dependencies are installed: "FastGGM" (https://github.com/wt2015-github/FastGGM), "Rcpp", and "RcppParallel". These packages are required to estimate precision matrices and run ONDSA effectively. You can install ONDSA using the following steps:
 
 ```r
 library(devtools)
@@ -27,9 +27,11 @@ install.packages("RcppParallel")
 
 # Install FastGGM from GitHub
 remotes::install_github("wt2015-github/FastGGM")
+library(FastGGM)
 
 # Install ONDSA package from GitHub
 remotes::install_github("jiachenchen322/ONDSA")
+library(ONDSA)
 ```
 ## Input Data Format
 ONDSA requires estimated precision matrices from multiple groups as input. Each group's network should be represented by a precision matrix, which captures the conditional dependencies among the variables (e.g., genes, proteins). The precision matrices can be estimated from raw omics data using the FastGGM package, which provides efficient tools for precision matrix calculation. FastGGM can be used to estimate group-specific precision matrices. You could load your own data for multiple groups (rows representing individuals and columns representing variables) and calculate the precision matrices. GGMs are useful for modeling omics networks based on continuous variables, assuming that the data can be transformed to approximate normality. Appropriate transformations may be needed if the data deviate significantly from normality. ONDSA identifies both differential and similar network structures across groups, providing insights into the omics relationships among variables across different conditions.
