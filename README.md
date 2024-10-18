@@ -15,7 +15,7 @@ Here, we provide an overview of ONDSA:
 
 ## Installation
 
-ONDSA and its experiments are implemented in R. Make sure the following dependencies are installed: "FastGGM" (https://github.com/wt2015-github/FastGGM), "Rcpp", and "RcppParallel". These packages are required to estimate precision matrices and run ONDSA effectively. You can install ONDSA using the following steps:
+ONDSA and its experiments are implemented in R. Make sure the following dependencies are installed: "FastGGM" (https://github.com/wt2015-github/FastGGM), "Rcpp", and "RcppParallel". These packages are required to estimate precision matrices and run ONDSA effectively. You can install the R package ONDSA using the following steps:
 
 ```r
 library(devtools)
@@ -117,7 +117,7 @@ print(result$similar_structures)
 
 ## Citation
 
-If you use ONDSA in your research, please cite our related publication/software.
+If you use our ONDSA R package in your research, please cite our related publication/software.
 
 ## Contact
 
