@@ -98,11 +98,11 @@ N <- c(nrow(group1_rawdata), nrow(group2_rawdata), nrow(group3_rawdata))
 varname <- colnames(group1_rawdata)
 
 # Estimate group-specific precision matrices using FastGGM
-n_total <- sum(N)
-lambda_value <- sqrt(2 * log(p / sqrt(n_total)) / n_total)
-fastggm_1 <- FastGGM_Parallel(Data_1Std, lambda=lambda_value)
-fastggm_2 <- FastGGM_Parallel(Data_2Std, lambda=lambda_value)
-fastggm_3 <- FastGGM_Parallel(Data_3Std, lambda=lambda_value)
+# lambda_value is an array corresponding to lambda of each group
+lambda_value <- sqrt(2 * log(p / sqrt(N)) / N)
+fastggm_1 <- FastGGM_Parallel(Data_1Std, lambda=lambda_value[1])
+fastggm_2 <- FastGGM_Parallel(Data_2Std, lambda=lambda_value[2])
+fastggm_3 <- FastGGM_Parallel(Data_3Std, lambda=lambda_value[3])
 
 # Create list of precision matrices
 Omega <- list(fastggm_1$precision, fastggm_2$precision, fastggm_3$precision)
