@@ -117,7 +117,7 @@ print(result$similar_structures)
 
 ## Citation
 
-If you use our ONDSA R package in your research, please cite our related publication/software.
+If you use our ONDSA R package in your research, please cite our related publication/software (https://academic.oup.com/bib/article/26/1/bbae610/7907886).
 
 ## Contact
 
